@@ -5,13 +5,13 @@
 ## Installation
 
 ```bash
-npm install iadb
+npm install @tclohm/iadb
 ```
 
 ## Usage
 
 ```js
-const iadb = require('iadb');
+const iadb = require('@tclohm/iadb');
 ```
 
 ## API
