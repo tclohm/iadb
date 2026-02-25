@@ -1,7 +1,7 @@
 {
   "name": "@tclohm/iadb",
   "type": "module",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Internet Auto Database — a utility library for car makes and models",
   "exports": "./src/index.js",
   "keywords": [
