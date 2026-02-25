@@ -11,7 +11,13 @@ npm install @tclohm/iadb
 ## Usage
 
 ```js
-const iadb = require('@tclohm/iadb');
+import * as iadb from '@tclohm/iadb';
+```
+
+Or import only what you need:
+
+```js
+import { getMakes, getModels } from '@tclohm/iadb';
 ```
 
 ## API
