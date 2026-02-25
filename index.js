@@ -1,10 +1,10 @@
-const data = require('../data/cars.json');
+import data from '../data/cars.json' assert { type: 'json' };
 
 /**
  * Get all car makes
  * @returns {string[]} Array of make names
  */
-function getMakes() {
+export function getMakes() {
   return data.makes.map(make => make.name);
 }
 
@@ -13,7 +13,7 @@ function getMakes() {
  * @param {string} make - The car make (case-insensitive)
  * @returns {string[]} Array of model names, or empty array if make not found
  */
-function getModels(make) {
+export function getModels(make) {
   const found = data.makes.find(m => m.name.toLowerCase() === make.toLowerCase());
   return found ? found.models : [];
 }
@@ -23,7 +23,7 @@ function getModels(make) {
  * @param {string} make - The car make (case-insensitive)
  * @returns {boolean}
  */
-function isValidMake(make) {
+export function isValidMake(make) {
   return data.makes.some(m => m.name.toLowerCase() === make.toLowerCase());
 }
 
@@ -33,7 +33,7 @@ function isValidMake(make) {
  * @param {string} model - The car model (case-insensitive)
  * @returns {boolean}
  */
-function isValidModel(make, model) {
+export function isValidModel(make, model) {
   const models = getModels(make);
   return models.some(m => m.toLowerCase() === model.toLowerCase());
 }
@@ -43,7 +43,7 @@ function isValidModel(make, model) {
  * @param {string} query - Partial make name (case-insensitive)
  * @returns {string[]} Array of matching make names
  */
-function searchMakes(query) {
+export function searchMakes(query) {
   return data.makes
     .filter(m => m.name.toLowerCase().includes(query.toLowerCase()))
     .map(m => m.name);
@@ -55,7 +55,7 @@ function searchMakes(query) {
  * @param {string} [make] - Optional make to narrow the search
  * @returns {Array<{make: string, model: string}>} Array of matching make/model pairs
  */
-function searchModels(query, make) {
+export function searchModels(query, make) {
   const makes = make ? data.makes.filter(m => m.name.toLowerCase() === make.toLowerCase()) : data.makes;
   const results = [];
   for (const m of makes) {
@@ -72,16 +72,6 @@ function searchModels(query, make) {
  * Get the full dataset
  * @returns {Object} Raw JSON data
  */
-function getAll() {
+export function getAll() {
   return data;
 }
-
-module.exports = {
-  getMakes,
-  getModels,
-  isValidMake,
-  isValidModel,
-  searchMakes,
-  searchModels,
-  getAll
-};
