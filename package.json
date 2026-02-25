@@ -4,6 +4,8 @@
   "version": "1.0.5",
   "description": "Internet Auto Database — a utility library for car makes and models",
   "exports": "./src/index.js",
+  "main": "./src/index.js",
+  "module": "./src/index.js",
   "keywords": [
     "cars",
     "auto",
