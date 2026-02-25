@@ -1,0 +1,22 @@
+{
+  "name": "iadb",
+  "version": "1.0.0",
+  "description": "Internet Auto Database — a utility library for car makes and models",
+  "main": "src/index.js",
+  "keywords": [
+    "cars",
+    "auto",
+    "vehicles",
+    "makes",
+    "models",
+    "database",
+    "iadb"
+  ],
+  "author": "",
+  "license": "MIT",
+  "files": [
+    "src/",
+    "data/",
+    "README.md"
+  ]
+}
