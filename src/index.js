@@ -1,6 +1,4 @@
-import { createRequire } from 'module';
-const require = createRequire(import.meta.url);
-const data = require('../data/cars.json');
+import data from '../data/cars.json' with { type: 'json' };
 
 /**
  * Get all car makes
